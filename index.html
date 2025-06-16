@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>CS Oyuncusu?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      margin-top: 100px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dünyanın en iyi Counter Strike oyuncusunu görmek ister misiniz?</h1>
+  <button onclick="location.href='sayfa2.html'">Evet</button>
+  <button id="hayirBtn">Hayır</button>
+
+  <script>
+    const hayirBtn = document.getElementById('hayirBtn');
+    let size = 20;
+
+    hayirBtn.addEventListener('click', () => {
+      size -= 2;
+      if (size <= 0) {
+        hayirBtn.style.display = 'none';
+      } else {
+        hayirBtn.style.fontSize = size + 'px';
+        hayirBtn.style.padding = (size / 2) + 'px ' + size + 'px';
+      }
+    });
+  </script>
+</body>
+</html>
